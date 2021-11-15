@@ -14,35 +14,32 @@ class MyApp extends StatelessWidget {
 }
 
 class FirstScreen extends StatelessWidget {
+  get onPressed => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            Icons.menu,
-            color: Colors.white,
-          ),
-          onPressed: () {},
+        appBar: AppBar(
+          title: Text('First Screen'),
         ),
-        title: Text('First Screen'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
+        body: Column(
+          children: <Widget>[
+            Text(
+              'A Title',
+              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
             ),
-            onPressed: () {},
-          )
-        ],
-      ),
-      body: Center(
-        child: Text('Hello World'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
-    );
+            Text(
+              'Description',
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                IconButton(onPressed: onPressed, icon: Icon(Icons.share)),
+                IconButton(onPressed: onPressed, icon: Icon(Icons.thumb_down)),
+                IconButton(onPressed: onPressed, icon: Icon(Icons.thumb_up))
+              ],
+            )
+          ],
+        ));
   }
 }
