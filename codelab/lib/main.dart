@@ -1,5 +1,5 @@
+import 'package:codelab/main_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:codelab/detail_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Wisata Bandung',
       theme: ThemeData(),
-      home: DetailScreen(),
+      home: MainScreen(),
     );
   }
 }
@@ -116,6 +116,9 @@ class DetailScreen extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            Container(
+              child: Text('ngetes slur`'),
             )
           ],
         ),
